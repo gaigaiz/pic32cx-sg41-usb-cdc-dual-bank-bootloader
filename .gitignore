@@ -1,0 +1,47 @@
+# ---- Backup of previous git history (kept locally for rollback, never tracked) ----
+.git.bak-*/
+
+# ---- Build outputs ----
+**/_build/
+**/out/
+**/merged_out/
+
+# ---- Third-party DFP / CMSIS packs (restored by the package manager) ----
+**/packs/
+
+# ---- MCC / CMake generated cache ----
+**/cmake/**/.generated/
+**/compile_commands.json
+**/memoryfile.xml
+**/*.ninja
+**/.ninja_deps
+**/.ninja_log
+**/CMakeConfigureLog.yaml
+**/CMakeCache.txt*
+
+# ---- Compiled objects / binaries / listings ----
+**/*.o
+**/*.elf
+**/*.hex
+**/*.bin
+**/*.map
+**/*.lst
+
+# ---- Backup / temporary files ----
+**/*.bak
+**/*.protocol.bak
+**/*.tmp*
+**/*.check_cache
+
+# ---- Local IDE debug config (tool serial / machine-specific paths) ----
+**/.vscode/*.mplab-local.json
+**/.vscode/settings.json
+
+# ---- Legacy / excluded items (kept on disk, not tracked) ----
+/Bootloader双Bank使用手册.md
+/BL工程改造为Fail-Safe双Bank_修改说明.md
+/pic32cx_sg41_cult.X/
+/pic32cx_sg41_curiosity_ultra.X/
+/docs/*.pdf
+/Tools/verify_merged_bin.py
+/Tools/inspect_hex.py

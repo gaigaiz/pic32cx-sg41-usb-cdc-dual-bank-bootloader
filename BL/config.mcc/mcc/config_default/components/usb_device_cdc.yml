@@ -1,0 +1,37 @@
+configVersion: 1.0.0
+componentName: usb_device_cdc
+coreVersion: 5.9.1
+device: PIC32CX1025SG41128
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: usb_device_cdc
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: usb
+  type: package
+  version: v3.16.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition: {}
+  symbols:
+    CONFIG_USB_DEVICE_CDC_INSTANCES:
+      attributes:
+        id: CONFIG_USB_DEVICE_CDC_INSTANCES
+        label: Number of Instances
+      children:
+      - children:
+        - attributes:
+            id: usb_device_cdc
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED:
+      attributes:
+        id: CONFIG_USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED
+        label: Combined Queue Depth
+      type: Integer
+  userData: {}

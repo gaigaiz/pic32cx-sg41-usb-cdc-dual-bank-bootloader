@@ -1,0 +1,230 @@
+configVersion: 1.0.0
+componentName: usb_device
+coreVersion: 5.9.1
+device: PIC32CX1025SG41128
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: usb_device
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: usb
+  type: package
+  version: v3.16.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: usb_device
+          x: '184'
+          y: '257'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CONFIG_USB_DEVICE_ATTRIBUTE_REMOTE_WAKEUP:
+      attributes:
+        id: CONFIG_USB_DEVICE_ATTRIBUTE_REMOTE_WAKEUP
+        label: Remote Wakeup Feature
+      type: Boolean
+    CONFIG_USB_DEVICE_ATTRIBUTE_SELF_POWERED:
+      attributes:
+        id: CONFIG_USB_DEVICE_ATTRIBUTE_SELF_POWERED
+        label: Self Powered
+      type: Boolean
+    CONFIG_USB_DEVICE_CONFIG_DESCRPTR_SIZE:
+      attributes:
+        id: CONFIG_USB_DEVICE_CONFIG_DESCRPTR_SIZE
+        label: CONFIG_USB_DEVICE_CONFIG_DESCRPTR_SIZE
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: '67'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_ENDPOINTS_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_ENDPOINTS_NUMBER
+        label: Number of Endpoints
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_ENDPOINT_READ_QUEUE_SIZE:
+      attributes:
+        id: CONFIG_USB_DEVICE_ENDPOINT_READ_QUEUE_SIZE
+        label: Combined Queue Depth
+      type: Integer
+    CONFIG_USB_DEVICE_ENDPOINT_WRITE_QUEUE_SIZE:
+      attributes:
+        id: CONFIG_USB_DEVICE_ENDPOINT_WRITE_QUEUE_SIZE
+        label: Combined Queue Depth
+      type: Integer
+    CONFIG_USB_DEVICE_EP0_BUFFER_SIZE:
+      attributes:
+        id: CONFIG_USB_DEVICE_EP0_BUFFER_SIZE
+        label: Endpoint 0 Buffer Size
+      type: Combo
+    CONFIG_USB_DEVICE_EVENT_ENABLE_SET_DESCRIPTOR:
+      attributes:
+        id: CONFIG_USB_DEVICE_EVENT_ENABLE_SET_DESCRIPTOR
+        label: Enable Set Descriptor Events
+      type: Boolean
+    CONFIG_USB_DEVICE_EVENT_ENABLE_SOF:
+      attributes:
+        id: CONFIG_USB_DEVICE_EVENT_ENABLE_SOF
+        label: Enable SOF Events
+      type: Boolean
+    CONFIG_USB_DEVICE_EVENT_ENABLE_SYNCH_FRAME:
+      attributes:
+        id: CONFIG_USB_DEVICE_EVENT_ENABLE_SYNCH_FRAME
+        label: Enable Synch Frame Events
+      type: Boolean
+    CONFIG_USB_DEVICE_FEATURE_ENABLE_ADVANCED_STRING_DESCRIPTOR_TABLE:
+      attributes:
+        id: CONFIG_USB_DEVICE_FEATURE_ENABLE_ADVANCED_STRING_DESCRIPTOR_TABLE
+        label: Enable advanced String Descriptor Table
+      type: Boolean
+    CONFIG_USB_DEVICE_FEATURE_ENABLE_AUTO_TIMED_REMOTE_WAKEUP_FUNCTIONS:
+      attributes:
+        id: CONFIG_USB_DEVICE_FEATURE_ENABLE_AUTO_TIMED_REMOTE_WAKEUP_FUNCTIONS
+        label: Use Auto Timed Remote Wake up Functions
+      type: Boolean
+    CONFIG_USB_DEVICE_FEATURE_ENABLE_BOS_DESCRIPTOR:
+      attributes:
+        id: CONFIG_USB_DEVICE_FEATURE_ENABLE_BOS_DESCRIPTOR
+        label: Enable BOS Descriptor Support
+      type: Boolean
+    CONFIG_USB_DEVICE_FEATURE_ENABLE_MICROSOFT_OS_DESCRIPTOR:
+      attributes:
+        id: CONFIG_USB_DEVICE_FEATURE_ENABLE_MICROSOFT_OS_DESCRIPTOR
+        label: Enable Microsoft OS Descriptor Support
+      type: Boolean
+    CONFIG_USB_DEVICE_FEATURE_ENABLE_MICROSOFT_OS_DESCRIPTOR_VENDOR_CODE:
+      attributes:
+        id: CONFIG_USB_DEVICE_FEATURE_ENABLE_MICROSOFT_OS_DESCRIPTOR_VENDOR_CODE
+        label: Vendor Code
+      type: String
+    CONFIG_USB_DEVICE_FUNCTIONS_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_FUNCTIONS_NUMBER
+        label: Number of Functions
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_INTERFACES_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_INTERFACES_NUMBER
+        label: CONFIG_USB_DEVICE_INTERFACES_NUMBER
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_MANUFACTURER_STRING:
+      attributes:
+        id: CONFIG_USB_DEVICE_MANUFACTURER_STRING
+        label: Manufacturer String
+      type: String
+    CONFIG_USB_DEVICE_MAX_POWER:
+      attributes:
+        id: CONFIG_USB_DEVICE_MAX_POWER
+        label: Maximum Power (mA)
+      type: Integer
+    CONFIG_USB_DEVICE_PRODUCT_ID_IDX0:
+      attributes:
+        id: CONFIG_USB_DEVICE_PRODUCT_ID_IDX0
+        label: Product ID
+      children:
+      - children:
+        - attributes:
+            value: '0x000A'
+          type: User
+        type: Values
+      type: String
+    CONFIG_USB_DEVICE_PRODUCT_ID_SELECTION_IDX0:
+      attributes:
+        id: CONFIG_USB_DEVICE_PRODUCT_ID_SELECTION_IDX0
+        label: Product ID Selection
+      type: Combo
+    CONFIG_USB_DEVICE_PRODUCT_STRING_DESCRIPTOR:
+      attributes:
+        id: CONFIG_USB_DEVICE_PRODUCT_STRING_DESCRIPTOR
+        label: Product String Selection
+      type: String
+    CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_DESCRIPTOR:
+      attributes:
+        id: CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_DESCRIPTOR
+        label: Serial Number
+      type: String
+    CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_ENABLE:
+      attributes:
+        id: CONFIG_USB_DEVICE_SERIAL_NUMBER_STRING_ENABLE
+        label: Add Device Serial Number
+      type: Boolean
+    CONFIG_USB_DEVICE_SPEED:
+      attributes:
+        id: CONFIG_USB_DEVICE_SPEED
+        label: CONFIG_USB_DEVICE_SPEED
+      type: String
+    CONFIG_USB_DEVICE_VENDOR_ID_IDX0:
+      attributes:
+        id: CONFIG_USB_DEVICE_VENDOR_ID_IDX0
+        label: Vendor ID
+      type: String
+    CONFIG_USB_DRIVER_INDEX:
+      attributes:
+        id: CONFIG_USB_DRIVER_INDEX
+        label: CONFIG_USB_DRIVER_INDEX
+      type: String
+    CONFIG_USB_DRIVER_INTERFACE:
+      attributes:
+        id: CONFIG_USB_DRIVER_INTERFACE
+        label: CONFIG_USB_DRIVER_INTERFACE
+      type: String
+    USB_DEVICE_RTOS:
+      attributes:
+        id: USB_DEVICE_RTOS
+        label: Run Library Tasks As
+      type: Combo
+    USB_DEVICE_RTOS_DELAY:
+      attributes:
+        id: USB_DEVICE_RTOS_DELAY
+        label: Task Delay
+      type: Integer
+    USB_DEVICE_RTOS_STACK_SIZE:
+      attributes:
+        id: USB_DEVICE_RTOS_STACK_SIZE
+        label: Stack Size
+      type: Integer
+    USB_DEVICE_RTOS_TASK_PRIORITY:
+      attributes:
+        id: USB_DEVICE_RTOS_TASK_PRIORITY
+        label: Task Priority
+      type: Integer
+    USB_DEVICE_RTOS_USE_DELAY:
+      attributes:
+        id: USB_DEVICE_RTOS_USE_DELAY
+        label: Use Task Delay?
+      type: Boolean
+  userData: {}

@@ -1,0 +1,119 @@
+configVersion: 1.0.0
+componentName: drv_usbfs_v1
+coreVersion: 5.9.1
+device: PIC32CX1025SG41128
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: drv_usbfs_v1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: usb
+  type: package
+  version: v3.16.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: drv_usbfs_v1
+          x: '380'
+          y: '261'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    USB_DEVICE_VBUS_SENSE:
+      attributes:
+        id: USB_DEVICE_VBUS_SENSE
+        label: Enable VBUS Sense
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    USB_DEVICE_VBUS_SENSE_PIN_NAME:
+      attributes:
+        id: USB_DEVICE_VBUS_SENSE_PIN_NAME
+        label: VBUS SENSE Pin Name
+      type: String
+    USB_DRIVER_RTOS:
+      attributes:
+        id: USB_DRIVER_RTOS
+        label: Run Library Tasks As
+      type: Combo
+    USB_DRIVER_RTOS_DELAY:
+      attributes:
+        id: USB_DRIVER_RTOS_DELAY
+        label: Task Delay
+      type: Integer
+    USB_DRIVER_RTOS_STACK_SIZE:
+      attributes:
+        id: USB_DRIVER_RTOS_STACK_SIZE
+        label: Stack Size
+      type: Integer
+    USB_DRIVER_RTOS_TASK_PRIORITY:
+      attributes:
+        id: USB_DRIVER_RTOS_TASK_PRIORITY
+        label: Task Priority
+      type: Integer
+    USB_DRIVER_RTOS_USE_DELAY:
+      attributes:
+        id: USB_DRIVER_RTOS_USE_DELAY
+        label: Use Task Delay?
+      type: Boolean
+    USB_DRV_HOST_ATTACH_DEBOUNCE_DURATION:
+      attributes:
+        id: USB_DRV_HOST_ATTACH_DEBOUNCE_DURATION
+        label: Attach De-bounce Duration (mSec)
+      type: Integer
+    USB_DRV_HOST_RESET_DUARTION:
+      attributes:
+        id: USB_DRV_HOST_RESET_DUARTION
+        label: Reset Duration (mSec)
+      type: Integer
+    USB_HOST_VBUS_ENABLE:
+      attributes:
+        id: USB_HOST_VBUS_ENABLE
+        label: Generate VBUS Enable Function
+      type: Boolean
+    USB_HOST_VBUS_ENABLE_PIN_NAME:
+      attributes:
+        id: USB_HOST_VBUS_ENABLE_PIN_NAME
+        label: VBUS Enable Pin Name
+      type: String
+    USB_INT_SOURCE_NUMBER:
+      attributes:
+        id: USB_INT_SOURCE_NUMBER
+        label: Number of USB Interrupts
+      children:
+      - children:
+        - attributes:
+            id: drv_usbfs_v1
+            value: '4'
+          type: Dynamic
+        type: Values
+      type: Integer
+    USB_OPERATION_MODE:
+      attributes:
+        id: USB_OPERATION_MODE
+        label: USB Mode Selection
+      type: Combo
+    USB_SPEED:
+      attributes:
+        id: USB_SPEED
+        label: USB Speed Selection
+      type: Combo
+    USE_PLIB:
+      attributes:
+        id: USE_PLIB
+        label: USE USB PLIB Library
+      type: Boolean
+  userData: {}

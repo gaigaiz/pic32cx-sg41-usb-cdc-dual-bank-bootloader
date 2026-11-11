@@ -1,0 +1,103 @@
+{
+    "version": "1.9",
+    "configurations": [
+        {
+            "name": "default",
+            "id": "",
+            "device": "PIC32CX1025SG41128",
+            "imagePath": "./out/BL/default.elf",
+            "toolProperties": "default-tool-base",
+            "tool": "Curiosity/Starter Kits (PKOB4)",
+            "packs": [
+                {
+                    "name": "PIC32CX-SG41_DFP",
+                    "vendor": "Microchip",
+                    "version": "1.6.172"
+                },
+                {
+                    "name": "CMSIS",
+                    "vendor": "ARM",
+                    "version": "6.3.0"
+                }
+            ],
+            "fileSet": "default",
+            "toolchain": "default-XC32"
+        }
+    ],
+    "propertyGroups": [
+        {
+            "name": "default-XC32",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:xc32@5.10",
+            "properties": {
+                "linker.no-startup-files": "true",
+                "compiler.place-data-into-section": "false",
+                "compiler.optimization-level": "-O2",
+                "linker.heap-size": "512",
+                "compiler.extra-include-directories": [
+                    "config.mcc/src",
+                    "config.mcc/src/config/default",
+                    "config.mcc/src/packs/CMSIS",
+                    "config.mcc/src/packs/CMSIS/CMSIS/Core/Include",
+                    "config.mcc/src/packs/PIC32CX1025SG41128_DFP"
+                ],
+                "compiler++.extra-include-directories": [
+                    "config.mcc/src",
+                    "config.mcc/src/config/default",
+                    "config.mcc/src/packs/CMSIS",
+                    "config.mcc/src/packs/CMSIS/CMSIS/Core/Include",
+                    "config.mcc/src/packs/PIC32CX1025SG41128_DFP"
+                ],
+                "linker.no-device-startup-code": "true",
+                "C32Global.mstacktcm": "false",
+                "compiler.isolate-each-function": "true",
+                "linker.remove-unused-sections": "true",
+                "compiler++.isolate-each-function": "true",
+                "compiler++.optimization-level": "-O1"
+            }
+        },
+        {
+            "name": "default-tool-base",
+            "type": "tool",
+            "properties": {}
+        }
+    ],
+    "fileSets": [
+        {
+            "name": "default",
+            "files": [
+                {
+                    "include": "**/*",
+                    "exclude": "**/@(build|_build|out|cmake|.vscode)/**/*|**/PIC32CX1025SG41128.ld"
+                },
+                "config.mcc/src/config/default/peripheral/nvmctrl/plib_nvmctrl.c",
+                "config.mcc/src/config/default/peripheral/evsys/plib_evsys.c",
+                "config.mcc/src/config/default/bootloader/bootloader_uart.c",
+                "config.mcc/src/main.c",
+                "config.mcc/src/config/default/initialization.c",
+                "config.mcc/src/config/default/btl.ld",
+                "config.mcc/src/config/default/startup_xc32.c",
+                "config.mcc/src/config/default/bootloader/bootloader_common.c",
+                "config.mcc/src/config/default/peripheral/port/plib_port.c",
+                "config.mcc/src/config/default/peripheral/clock/plib_clock.c",
+                "config.mcc/src/config/default/peripheral/nvic/plib_nvic.c",
+                "config.mcc/src/config/default/peripheral/pac/plib_pac.c",
+                "config.mcc/src/config/default/peripheral/cmcc/plib_cmcc.c",
+                "config.mcc/src/config/default/peripheral/systick/plib_systick.c",
+                "config.mcc/src/config/default/peripheral/sercom/usart/plib_sercom4_usart.c",
+                "config.mcc/src/config/default/peripheral/dsu/plib_dsu.c",
+                "config.mcc/src/config/default/PIC32CX1025SG41128.ld",
+                "config.mcc/src/config/default/peripheral/wdt/plib_wdt.c",
+                "config.mcc/src/config/default/usb_device_init_data.c",
+                "config.mcc/src/config/default/usb/src/usb_device.c",
+                "config.mcc/src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1.c",
+                "config.mcc/src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1_device.c",
+                "config.mcc/src/config/default/usb/src/usb_device_cdc.c",
+                "config.mcc/src/config/default/usb/src/usb_device_cdc_acm.c",
+                "config.mcc/src/config/default/system/int/src/sys_int.c",
+                "config.mcc/src/app.c",
+                "config.mcc/src/config/default/tasks.c"
+            ]
+        }
+    ]
+}

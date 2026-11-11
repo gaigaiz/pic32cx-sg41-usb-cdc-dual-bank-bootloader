@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // 注意：此处的属性可能会覆盖 MPLAB 项目设置
+      "name": "启动 {APP}: {Test}",
+      "type": "mplab-core-da",
+      "request": "launch",
+      "project": "APP",
+      "configuration": "default",
+      "stopOnEntry": true,
+      "program": "${workspaceFolder}/out/APP/default.elf",
+      "tool": "auto"
+    }
+  ]
+}

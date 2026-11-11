@@ -1,0 +1,231 @@
+configVersion: 1.0.0
+componentName: uart_bootloader
+coreVersion: 5.9.1
+device: PIC32CX1025SG41128
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: uart_bootloader
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: bootloader
+  type: package
+  version: v3.9.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: btl_MEMORY_dependency
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: nvmctrl
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: NVMCTRL_MEMORY
+            type: String
+          type: Attributes
+        type: DirectDependency
+      - attributes:
+          id: btl_UART_dependency
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: sercom4
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: SERCOM4_UART
+            type: String
+          type: Attributes
+        type: DirectDependency
+      type: Attachments
+    type: uart_bootloader
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: uart_bootloader
+          x: '247'
+          y: '104'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BTL_CUSTOM_RAM_SIZE:
+      attributes:
+        id: BTL_CUSTOM_RAM_SIZE
+        label: RAM Size
+      children:
+      - children:
+        - attributes:
+            value: DEFAULT
+          type: User
+        type: Values
+      type: Combo
+    BTL_DUAL_BANK:
+      attributes:
+        id: BTL_DUAL_BANK
+        label: Use Dual Bank For Safe Flash Update
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    BTL_FLASH_SIZE:
+      attributes:
+        id: BTL_FLASH_SIZE
+        label: BTL_FLASH_SIZE
+      type: String
+    BTL_FUSE_PROGRAM_ENABLE:
+      attributes:
+        id: BTL_FUSE_PROGRAM_ENABLE
+        label: Enable Fuse Programming
+      type: Boolean
+    BTL_HW_CRC_GEN:
+      attributes:
+        id: BTL_HW_CRC_GEN
+        label: Bootloader Hardware CRC Generator
+      type: Boolean
+    BTL_MEM_START_ADDR:
+      attributes:
+        id: BTL_MEM_START_ADDR
+        label: Bootloader Memory Used start address
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    BTL_RAM_SIZE:
+      attributes:
+        id: BTL_RAM_SIZE
+        label: BTL_RAM_SIZE
+      children:
+      - children:
+        - attributes:
+            id: readOnly
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: String
+    BTL_RAM_START:
+      attributes:
+        id: BTL_RAM_START
+        label: BTL_RAM_START
+      type: String
+    BTL_SIZE:
+      attributes:
+        id: BTL_SIZE
+        label: Bootloader Size (Bytes)
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: '8192'
+          type: Dynamic
+        type: Values
+      type: String
+    BTL_START:
+      attributes:
+        id: BTL_START
+        label: Bootloader Start Address
+      type: String
+    BTL_TRIGGER_ENABLE:
+      attributes:
+        id: BTL_TRIGGER_ENABLE
+        label: Enable Bootloader Trigger From Firmware
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    BTL_TRIGGER_LEN:
+      attributes:
+        id: BTL_TRIGGER_LEN
+        label: Number Of Bytes To Reserve From Start Of RAM
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '16'
+          type: User
+        type: Values
+      type: String
+    BTL_TYPE:
+      attributes:
+        id: BTL_TYPE
+        label: Bootloader Type
+      type: String
+    BTL_WDOG_ENABLE:
+      attributes:
+        id: BTL_WDOG_ENABLE
+        label: Enable Watchdog Refresh If Enabled Through FUSE
+      type: Boolean
+    CRC_PERIPH_USED:
+      attributes:
+        id: CRC_PERIPH_USED
+        label: CRC Peripheral Used
+      type: String
+    MEM_USED:
+      attributes:
+        id: MEM_USED
+        label: Bootloader NVM Memory Used
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: NVMCTRL
+          type: Dynamic
+        type: Values
+      type: String
+    PERIPH_USED:
+      attributes:
+        id: PERIPH_USED
+        label: Bootloader Peripheral Used
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: SERCOM4_USART
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}
