@@ -131,6 +131,7 @@ Reset command sent. MCU will reboot, USB will disconnect, skip waiting ACK.
 - APP 跳转与 LED 现场闭环、DFLL/USB 时钟锁定复核为待验证项，详见问题记录文档。
 - 构建产物（`_build/`、`out/`）、DFP 包（`packs/`）与本地调试配置不纳入版本库。
 
-## 8. 版权说明
+## 8. 版权与许可
 
-脚本与固件框架基于 Microchip Harmony/MPLAB 样例代码，版权归 Microchip Technology Inc. 所有；衍生代码仅可用于 Microchip 产品。
+- 本仓库自研脚本与衍生代码采用 MIT License，详见 `LICENSE`。
+- 工程框架基于 Microchip Harmony/MPLAB 样例代码与 MCC 生成文件，该部分版权归 Microchip Technology Inc. 所有，遵循其原始许可条款；衍生代码仅可用于 Microchip 产品。
