@@ -1,5 +1,7 @@
 # PIC32CX1025SG41128 USB CDC Dual-Bank Bootloader
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ## 1. 项目解决什么问题
 
 本工程在 Microchip PIC32CX1025SG41128（Cortex-M4F，1 MB Flash）上实现一个 Fail-Safe 双 Bank Bootloader，并把升级通道由传统 SERCOM4 UART 改为 **USB CDC 虚拟串口**：
@@ -133,5 +135,5 @@ Reset command sent. MCU will reboot, USB will disconnect, skip waiting ACK.
 
 ## 8. 版权与许可
 
-- 本仓库自研脚本与衍生代码采用 MIT License，详见 `LICENSE`。
+- **License: MIT** — 本仓库自研脚本与衍生代码采用 MIT License，完整条款见 [`LICENSE`](LICENSE)。
 - 工程框架基于 Microchip Harmony/MPLAB 样例代码与 MCC 生成文件，该部分版权归 Microchip Technology Inc. 所有，遵循其原始许可条款；衍生代码仅可用于 Microchip 产品。
